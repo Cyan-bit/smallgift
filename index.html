@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Valentines!</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./js/jquery.js"></script>
+  </head>
+  <body>
+    <audio id="bgmaudio" autoplay loop>
+      <source src="./music/bgm.mp3" type="audio/mp3" />
+    </audio>
+
+    <div id="bg" class="bg"></div>
+
+    <header>
+      <a
+        id="musictoggle"
+        class="musictoggle"
+        href="javascript:void(0);"
+        onclick="toggleMute()"
+        >Mute</a
+      >
+      <h1 class="title">Happy Valentines Day!</h1>
+    </header>
+    <main id="main">
+      <div class="wrapper">
+        <div class="envelope-container" id="imlazy">
+          <h2 class="envelope-notif">You've got mail!</h2>
+          <img src="./img/envelope.png" alt="valentine evnelope" />
+          <ul class="button-list">
+            <li id="dbtn">Delete</li>
+            <li id="openletter">Open &lt3</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

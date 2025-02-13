@@ -8,12 +8,17 @@
     <script src="./js/jquery.js"></script>
   </head>
   <body>
-    <audio id="bgmaudio" autoplay loop>
+    <audio id="bgmaudio" loop>
       <source src="./music/bgm.mp3" type="audio/mp3" />
     </audio>
 
     <div id="bg" class="bg"></div>
 
+    <div id="entrybox" class="entrybox">
+      <a class="entrybtn" href="javascript:void(0);" onclick="playaudio();"
+        >Enter</a
+      >
+    </div>
     <header>
       <a
         id="musictoggle"

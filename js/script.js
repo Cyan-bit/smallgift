@@ -3,6 +3,7 @@ const openbtn = document.getElementById("openletter");
 const wrapper = document.getElementById("imlazy");
 const delbtn = document.getElementById("dbtn");
 const mtoggle = document.getElementById("musictoggle");
+const entrybox = document.getElementById("entrybox");
 let dd,
   mm,
   y,
@@ -11,6 +12,15 @@ let dd,
 
 // music controls
 audio.volume = 0.03;
+
+function playaudio() {
+  bgmaudio.play();
+  entrybox.classList.add("wf-active");
+  setTimeout(function () {
+    entrybox.remove();
+  }, 1000);
+}
+
 function toggleMute() {
   audio.muted = !audio.muted;
   if (audio.muted == true) {
@@ -29,33 +39,6 @@ function openLetter() {
       $("#imlazy").load("scenes/letter.html");
     });
   }, 1000);
-  // currentDate = new Date();
-  // mm = currentDate.getMonth();
-  // dd = currentDate.getDate();
-  // y = currentDate.getFullYear();
-
-  // const formattedDate = mm + "/" + dd;
-  // const VDate = "1/7"; // CHANGE THE DATE LATER
-
-  // console.log(formattedDate + " " + VDate); //Debug for dates
-
-  // if (formattedDate == VDate) {
-  //   wrapper.classList.add("wf-active");
-
-  //   setTimeout(function () {
-  //     $(document).ready(function () {
-  //       $("#imlazy").load("scenes/letter.html");
-  //     });
-  //   }, 1000);
-
-  //   console.log("WORKIN");
-  // } else {
-  //   // shake animations
-  //   openbtn.classList.add("btnShake");
-  //   setTimeout(function () {
-  //     openbtn.classList.remove("btnShake");
-  //   }, 2000);
-  // }
 }
 
 function yousure() {
